@@ -1,0 +1,223 @@
+{% set contract_vendors =
+  [
+    {
+      name: 'AECOM',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/aecom_logo.png',
+      vendor_home_url: 'https://aecom.com/services/planning-consulting/geospatial-services/',
+      vendor_page_url: 'https://solutions.aecomonline.net/stratmap/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4495&keyword=aecom',
+      tags: ['products','services']
+    },
+    {
+      name: 'AllTerra Central, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Allterra_logo2.png',
+      vendor_home_url: 'https://allterracentral.com/',
+      vendor_page_url: 'https://allterracentral.com/allterra-dir_pricing',
+      dir_page_url: 'https://www.dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4504&keyword=DIR-CPO-TMP-444',
+      tags: ['products','services','software']
+    },
+    {
+      name: 'Applied Geographics, Inc. (AppGeo)',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Appgeo_web_md.png',
+      vendor_home_url: 'https://www.appgeo.com/',
+      vendor_page_url: 'https://www.appgeo.com/texas-dir-cpo-4500/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4500&keyword=Applied%20Geographics',
+      tags: ['products','services']
+    },
+    {
+      name: 'Atlantic Group LLC',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/atlantic.png',
+      vendor_home_url: 'https://atlantic.tech',
+      vendor_page_url: 'https://atlantic.tech/contract-dir-cpo-4690/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4690&keyword=Atlantic',
+      tags: ['products','services']
+    },
+    {
+      name: 'Continental Mapping Consultants, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/continental_logo.png',
+      vendor_home_url: 'https://www.continentalmapping.com/',
+      vendor_page_url: '',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4762&keyword=Continental%20Mapping',
+      tags: ['products','services']
+    },
+    {
+      name: 'Dewberry Engineers, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Dewberry_web.png',
+      vendor_home_url: 'https://www.dewberry.com/services/geospatial',
+      vendor_page_url: 'https://www.dewberry.com/services/geospatial/texas-dir',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4506&keyword=Dewberry',
+      tags: ['products','services']
+    },
+    {
+      name: 'Fugro USA Land, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/fugro_logo.png',
+      vendor_home_url: 'https://www.fugro.com',
+      vendor_page_url: 'https://www.fugro.com/texas-dir-contract-dir-cpo-4643',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4643&keyword=Fugro',
+      tags: ['products','services','software']
+    },
+    {
+      name: 'GeoComm',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Geocommlogo.png',
+      vendor_home_url: 'http://www.geo-comm.com/',
+      vendor_page_url: 'https://geo-comm.com/2020texasdir/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4499&keyword=Geo-Comm',
+      tags: ['services','software']
+    },
+    {
+      name: 'GISinc',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/GISinclogo.png',
+      vendor_home_url: 'https://www.gisinc.com',
+      vendor_page_url: 'https://info.gisinc.com/gisincs-tx-dir-contract',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4503&keyword=GIS%20Inc.',
+      tags: ['services']
+    },
+    {
+      name: 'Halff Associates, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/halff_logo.png',
+      vendor_home_url: 'http://gis.halff.com',
+      vendor_page_url: 'https://www.halff.com/our-work/services/halff-texas-dir/',
+      dir_page_url: 'https://www.dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4695&keyword=halff',
+      tags: ['services']
+    },
+    {
+      name: 'HDR Engineering, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/HDR_logo.png',
+      vendor_home_url: 'https://www.hdrinc.com',
+      vendor_page_url: 'https://experience.arcgis.com/experience/4365123019ec42d5949b082ac098b088/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4694&keyword=HDR',
+      tags: ['services']
+    },
+    {
+      name: 'KCI Technologies, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/KCI_logo_long.png',
+      vendor_home_url: 'https://www.kci.com',
+      vendor_page_url: 'https://texassolutions.kci.com/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4647&keyword=KCI',
+      tags: ['services']
+    },
+    {
+      name: 'Merrick',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Merricklogo.png',
+      vendor_home_url: 'https://www.merrick.com/',
+      vendor_page_url: 'https://www.merrick.com/services/geospatial-services/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4502&keyword=Merrick',
+      tags: ['products','services']
+    },
+    {
+      name: 'Quantum Spatial',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Quantumlogo.png',
+      vendor_home_url: 'http://quantumspatial.com',
+      vendor_page_url: 'https://quantumspatial.com/about-us/our-company',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4507&keyword=Quantum%20Spatial',
+      tags: ['products','services']
+    },
+    {
+      name: 'Resource Data, Inc.',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/resourcedata_logo.png',
+      vendor_home_url: 'https://www.resourcedata.com',
+      vendor_page_url: 'https://www.resourcedata.com/about/geospatial',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4514&keyword=DIR-CPO-TMP-444',
+      tags: ['services']
+    },
+    {
+      name: 'Sanborn',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/sanborn_logo_sm.jpg',
+      vendor_home_url: 'http://www.sanborn.com/',
+      vendor_page_url: 'https://www.sanborn.com/texasdir/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4498&keyword=Sanborn',
+      tags: ['products','services']
+    },
+    {
+      name: 'Surdex',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/surdex_logo_sm.jpg',
+      vendor_home_url: 'https://www.surdex.net/',
+      vendor_page_url: 'https://www.texas-geospatial.com/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4496&keyword=Surdex',
+      tags: ['products','services']
+    },
+    {
+      name: 'Tessellations Incorporated',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/tessellations_inc.png',
+      vendor_home_url: 'https://www.tessellations.us/',
+      vendor_page_url: 'https://tessellations.us/texas-dir/',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4750&keyword=Tessellations',
+      tags: ['products','services','software']
+    },
+    {
+      name: 'Woolpert',
+      status: 'available',
+      logo_url: 'https://cdn.tnris.org/images/Woolpertlogo.png',
+      vendor_home_url: 'https://woolpert.com/',
+      vendor_page_url: 'https://info.woolpert.com/woolpert-texas-strategic-mapping-contract',
+      dir_page_url: 'https://dir.texas.gov/View-Search/Contracts-Detail.aspx?contractnumber=DIR-CPO-4508&keyword=Woolpert',
+      tags: ['products','services']
+    }
+  ]
+%}
+
+{% for item in contract_vendors %}
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+    {% if item.status == 'unavailable' %}
+    <div class="card card-body vendor-box unavailable">
+    {% else %}
+      <div class="card card-body vendor-box">
+    {% endif %}
+        <div class="myDiv">
+          <a href="{{item.vendor_home_url}}">
+            <img class="img-fluid" src="{{item.logo_url}}" alt="Logo and home page for {{item.name}}">
+          </a>
+        </div>
+        <div class="myDiv2 caption">
+          <h3 class="sr-only">{{item.name|safe}}</h3>
+          <ul class="list-clean">
+          <br>
+            <li>
+            {% if item.vendor_page_url %}
+            <a href="{{item.vendor_page_url}}"><i class="fa fa-new-window"></i>Contract Page</a>
+            {% else %}
+            <em>Contract Page in progress</em>
+            {% endif %}
+            </li>
+
+            <li>
+            {% if item.dir_page_url %}
+            <a href="{{item.dir_page_url}}"><i class="fa fa-new-window"></i>DIR Contract Page</a>
+            {% else %}
+            <em>DIR Contract Expired</em>
+             {% endif %}
+            </li>
+          </ul>
+        </div>
+        <div class="myDiv3">
+          {% if 'products' in item.tags %}
+            <i class="fa fa-box-open" alt="Products"></i>
+          {% endif %}
+          {% if 'services' in item.tags %}
+            <i class="fa fa-wrench" alt="Services"></i>
+          {% endif %}
+          {% if 'software' in item.tags %}
+            <i class="fa fa-laptop" alt="Software"></i>
+          {% endif %}
+        </div>
+      </div>
+  </div>
+{% endfor %}

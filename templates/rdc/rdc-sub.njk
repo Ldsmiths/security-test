@@ -1,0 +1,63 @@
+{% extends "base.njk" %}
+
+
+{% block topcontent %}
+<div class="container-fluid full gio-top">
+      <div class="top-container">
+      {% if mainimage %}
+        <img class="img-fluid img-responsive mx-auto d-block" src="{{mainimage}}" alt="Masthead for {{title}}">
+      {% endif %}
+
+      <div class="top-header mx-auto d-block">
+          <div class="container-md">
+            <h1 class="banner-header">{{title}}</h1>
+            {% if abstract %}
+              <div class="lead banner-lead">{{abstract}}</div>
+            {% endif %}
+          </div>
+      </div>
+      </div>
+</div>
+{% endblock %}
+
+{% block contentsOne %}
+{% include "rdc/nav.njk" %}
+
+<div id="contentMain" class="container-md">
+
+  <div class="row">
+    <div class="col-lg-8 rdc-sub-content-column">
+
+      {{ contents|safe }}
+    </div>
+    <div class="col-lg-4">
+      {% if title=='Research & Distribution Center (RDC)' %}
+      <h3>Search, Download, Order Data</h3>
+      <p class="lead">Use the TNRIS DataHub to locate your desired data. The majority of TNRIS data is available for download. All data can be ordered through the RDC.</p>
+      <a class="btn btn-lg btn-tnris btn-block" href="https://data.tnris.org"><img style="width: 20px; margin-bottom: 0 !important;" src="https://cdn.tnris.org/images/baseline_view_comfy_white_36dp.png" alt="Launch DataHub icon"> Launch DataHub</a>
+      <hr>
+      {% endif %}
+
+      {% if title=='Custom Maps' %}
+        <h3>Order Custom Map</h3>
+        <p>Use the online form to order a custom map. Please review the pricing list below before placing an order.</p>
+        <a href="/order-map" class="btn btn-lg btn-success btn-block"><span class="fas fa-shopping-cart"></span> Order Map</a>
+        <hr>
+        {% include "rdc/custom-pricing.njk" %}
+      {% endif %}
+
+      <h3>RDC Office Hours</h3>
+      <p>
+        Monday-Friday, 8am-4pm<br />
+        By Appointment Only<br />
+        <i class="fa fa-phone"></i> <a href="tel:5124638337">512-463-8337</a>
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+{% endblock %}

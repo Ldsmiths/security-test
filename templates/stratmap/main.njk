@@ -1,0 +1,34 @@
+{% extends "base.njk" %}
+
+{% block topcontent %}
+<div class="container-fluid full gio-top">
+
+      <div class="top-container">
+      {% if mainimage %}
+        <img class="img-fluid img-responsive mx-auto d-block" src="{{mainimage}}" alt="Masthead for {{title}}">
+      {% endif %}
+      <div class="top-header mx-auto d-block">
+          <div class="container-md">
+            <h1 class="banner-header">
+              {% if 'StratMap' in title %}
+                {{title}}
+              {% else %}
+                <small>StratMap</small>
+                {{title}}
+              {% endif %}
+            </h1>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block contentsOne %}
+{% endblock %}
+
+{% block contentsTwo %}
+ {% include "stratmap/nav.njk" %}
+     {{ contents|safe }}
+  </div>
+{% endblock %}

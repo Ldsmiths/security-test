@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{% block topcontent %}
+<div id="stratmap-top-header" class="p-2">
+  <div class="container-md">
+    <h1 id="ap-lp-title" class="banner-header"><small class="text-muted">StratMap</small><br>{{title}}</h1>
+  </div>
+</div>
+<div class="container-fluid full gio-top">
+      <div class="container-md" class="embed-responsive embed-responsive-21by9">
+        <div class="embed-responsive embed-responsive-21by9">
+          <iframe title="Using StratMap Data" class="embed-responsive-item youtube"  src="{{youtube_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block contentsOne %}
+{% endblock %}
+
+{% block contentsTwo %}
+    {% include "stratmap/nav.njk" %}
+     {{ contents|safe }}
+  </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.njk" %}
+{% import "_form_macros.njk" as form %}
+
+
+{% block styles %}
+  {{ super() }}
+
+  {{form.styles()}}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+
+  {{form.scripts()}}
+{% endblock %}
+
+{% block topcontent %}
+<div class="georodeo-masthead container-fluid full">
+    <div class="top-container">
+        <div class="sr-only">
+            <h1>{{title}}</h1> {{abstract}}
+        </div>
+        <a href="/georodeo/2015"><img class="main d-none d-md-block" src="{{mainimage}}" alt="Masthead for {{title}}"></a>
+        <a href="/georodeo/2015"><img class="img-fluid d-block d-md-none" src="https://cdn.tnris.org/images/small_georodeo.jpg" alt="A banner for the 2015 GeoRodeo, Cowboy Nerd in front of Chisos Mountains"></a>
+    </div>
+</div>
+
+<div id="intro" class="georodeo-intro">
+    <div class="container-md">
+        <div class="row">
+          <div class="lead col-sm-8">
+            <h2>{{title}}</h2>
+            {{ contents|safe }} 
+          </div>
+          <div class="col-sm-4">
+              <a class="btn btn-danger btn-lg btn-block" href="https://www.regonline.com/Register/Checkin.aspx?EventID=1700820"><i class="fa fa-edit"></i> Become a Sponsor</a>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

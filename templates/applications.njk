@@ -1,0 +1,40 @@
+{% extends "base.njk" %}
+
+{% block contentsOne %}
+<div id="contentMain" class="container-md">
+  <div class="row">
+    <div class="col-lg-8">
+      {% if headerlabel %}
+      {% endif %}
+      <h1>
+        {% if headerlabel %}
+        <small>{{ headerlabel }}</small>
+        {% endif %} <br>
+        {{title}}</h1>
+      {% if abstract %}
+        <div class="lead">{{abstract}}</div>
+      {% endif %}
+
+      {% if mainimage %}
+        <img class="img-fluid mx-auto d-block" src="{{ mainimage }}">
+      {% endif %}
+
+      {{ contents|safe }}
+    </div>
+
+    <div class="col-lg-3 offset-lg-1">
+
+            {% include "partials/applications-side.njk" %}
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-lg-12 giscat-footer">
+      Powered by
+      <a href="http://giscat.tnris.org/">
+        <img src="https://cdn.tnris.org/images/GISCAT_transparent.png" class="img-fluid" alt="Classic Data Catalog pouncing tiger" title="GISCAT">
+      </a>
+  </div>
+</div>
+</div>
+{% endblock %}

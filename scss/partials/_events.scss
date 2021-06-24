@@ -1,0 +1,100 @@
+@import "variables";
+
+#events-container {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;
+
+  .event-circle {
+    padding: 20px 10px 20px 10px;
+    max-width: 300px;
+
+    .shadow-wrapper {
+      filter: drop-shadow(3px 6px 5px rgba(0,0,0,0.55));
+
+      a {
+        background: $black;
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        display: block;
+        width: 80%;
+
+        img {
+          opacity: .45;
+        }
+
+        &:hover {
+          img {
+          opacity: .9;
+          }
+        }
+      }
+
+      h3 {
+        color: $white;
+        font-size: 45px;
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        width: 75%;
+        padding: 0;
+        margin: 0;
+        text-shadow: 1px 1px 2px #000;
+
+        @media (max-width: $screen-sm) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .meeting-box {
+    font-size: 16px;
+    margin-top: -15px;
+    border: solid thin #CCC;
+    padding: 10px;
+    box-shadow: 0 2px 4px #CCC;
+    border-radius: 5px;
+
+    hr {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+#events-front {
+  border-left: 1px solid $midgrey;
+  font-size: 15px;
+  padding-left: 15px;
+
+  @media (min-width: $screen-md) {
+    border-left: none;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 5px;
+
+    a {
+      color: $auburn;
+    }
+
+    i {
+      float: none;
+      font-size: inherit;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+    a {
+      color: $darkgrey;
+    }
+  }
+}

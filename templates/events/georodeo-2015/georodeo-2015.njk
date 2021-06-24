@@ -1,0 +1,63 @@
+{% extends "base.njk" %}
+{% import "_form_macros.njk" as form %}
+
+
+{% block styles %}
+  {{ super() }}
+
+  {{form.styles()}}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+
+  {{form.scripts()}}
+{% endblock %}
+
+{% block topcontent %}
+<div class="georodeo-masthead container-fluid full">
+    <div class="top-container">
+        <div class="sr-only">
+            <h1>{{title}}</h1>
+            {{abstract}}
+        </div>
+        <img class="main d-none d-md-block" src="{{mainimage}}" alt="Masthead for {{title}}">
+        <img class="img-fluid d-block d-md-none" src="https://cdn.tnris.org/images/small_georodeo.jpg" alt="A banner for the 2015 GeoRodeo, Cowboy Nerd in front of Chisos Mountains">
+    </div>
+</div>
+
+<div id="intro" class="georodeo-intro">
+    <div class="container-md">
+        <div class="row">
+            {% include "events/georodeo-2015/georodeo-intro.njk" %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block contentsOne %}
+<div id="contentMain" class="container-md">
+<div class="row">
+    <div class="col-lg-4 order-lg-2">
+        {% block sidebarLeft %}
+            <div class="georodeo-side">
+                {% include "events/georodeo-2015/georodeo-side.njk" %}
+            </div>
+        {% endblock %}
+    </div>
+    <div class="col-lg-8 order-lg-1">
+        {{ contents|safe }}
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block contentsTwo %}
+<section class="georodeo-bottom">
+    <div class="container-md">
+        <div class="row">
+            {% include "events/georodeo-2015/georodeo-map.njk" %}
+        </div>
+    </div>
+</section>
+{% endblock %}

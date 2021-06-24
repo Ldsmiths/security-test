@@ -1,0 +1,45 @@
+{% extends "base.njk" %}
+
+{% block topcontent %}
+  <div class="container-fluid full gio-top">
+    <div class="top-container">
+    {% if mainimage %}
+      <img class="img-fluid img-responsive mx-auto d-block" src="{{mainimage}}" alt="Masthead for {{title}}">
+    {% endif %}
+    {% if mainimagemd %}
+      <img class="img-fluid mx-auto d-block d-lg-none d-sm-none d-none" src="{{mainimagemd}}" alt="Masthead for {{title}}">
+    {% endif %}
+    {% if mainimagesm %}
+      <img class="img-fluid mx-auto d-block d-lg-none d-md-none" src="{{mainimagesm}}" alt="Masthead for {{title}}">
+    {% endif %}
+    <div class="top-header mx-auto d-block">
+        <div class="container-md">
+          <h1 class="banner-header">{{title}}</h1>
+        </div>
+    </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block contentsOne %}
+
+  {% include "gio/gio-nav.njk" %}
+  <div class="container meeting-bar">
+    {% include "gio/gio-calendar-quad.njk" %}
+  </div>
+<br><br>
+  {{ contents|safe }}
+  <div class="container-md">
+    <div class="row">
+      <div class="col-sm-12 col-lg-7">
+        {% include "gio/gio-main.njk" %}
+      </div>
+      <div class="col-sm-12 col-lg-5 blog-sidebar">
+        {% include "gio/gio-bios.njk" %}
+        {% include "gio/gis-community-meeting.njk" %}
+      </div>
+    </div>
+  </div>
+  {% include "gio/gio-reports.njk" %}
+
+{% endblock %}

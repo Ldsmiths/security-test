@@ -1,0 +1,596 @@
+.stratmap-bar {
+  margin-bottom: 1rem;
+  background: $darkgrey;
+  font-size: 18px;
+
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover {
+    background-color: lighten($forum2015blue, 5%);
+  }
+}
+
+@media (max-width: $screen-md) {
+  .stratmap-bar a { 
+    font-size: 14px;
+  }
+}
+
+
+.stratmap-project {
+
+    .card.card-body{
+      border: none;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+}
+
+#stratmap-by-the-numbers {
+  background: $lightgrey;
+  color: $white;
+  font-size: 18px;
+  padding-bottom: 30px;
+  // text-shadow: 2px 2px 2px #333;
+
+  h2 {
+    color: $white;
+    // font-size: 40px;
+  }
+
+  &.front-sm-numbers {
+    padding: 1rem;
+    color: $darkgrey;
+
+    h2 {
+      color: $darkgrey;
+    }
+  }
+
+  strong {
+    font-size: 25px;
+  }
+
+  &.lidar-feature {
+    padding: 1rem;
+    background: url(https://cdn.tnris.org/images/buffalo_lidar_bg.jpg) 0 0;
+  }
+
+  &.lidar-numbers {
+    padding: 1rem;
+    background: url(https://cdn.tnris.org/images/capcog_2012_140cm_overview.jpg) 0 0;
+  }
+
+  &.ortho-numbers {
+    padding: 1rem;
+    background: url(https://cdn.tnris.org/images/texas_orthoimagery_program_top_2008_50cm_nc_cir_natural.jpg) 0 0;
+  }
+
+  &.hydrocallout {
+    padding: 1rem;
+    background: $lightergrey;
+    color: $darkgrey;
+
+    h2 {
+      color: $darkgrey;
+    }
+  }
+}
+
+#parcel-numbers {
+  background: $lightgrey;
+  color: $darkgrey;
+  font-size: 18px;
+  padding-bottom: 30px;
+
+  h2 {
+    color: $darkgrey;
+  }
+
+  strong {
+    font-size: 25px;
+  }
+}
+
+.card.card-body.vendor-box {
+  @media (min-width: $screen-sm) {
+    min-height: 185px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    a {
+      color: #3366BB;
+    }
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  em {
+    font-size: 14px;
+  }
+
+  &.unavailable {
+    background: $lightgrey;
+
+    .caption {
+      color: $middarkgrey;
+    }
+
+    img {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    }
+
+    &:first-child a {
+      color: $middarkgrey;
+    }
+  }
+}
+
+ul.stratmap-work {
+  list-style-type: square;
+  padding-left: 1em;
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  strong {
+    font-size: 18px;
+  }
+
+}
+
+
+#orthoimagery-statewide.spot-select-for-texas-pan-bw-1999-2001-10m {
+  display: none;
+}
+
+.contractspot {
+  font-size: 18px;
+}
+
+// Parcels
+.parcel-highlight {
+  background: $canary;
+  padding: 2%;
+
+  p {
+  font-family: $proxima;
+  font-size: 26px;
+  }
+}
+
+
+#stratmap-hydrography {
+  figcaption {
+    color: $middarkgrey;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}
+
+#agency-parcel-uses {
+  ul {
+    padding: 0;
+    padding-left: 20px;
+  }
+}
+
+.parcel-fill {
+  background: #ff8e52;
+}
+
+
+.timeline-stratmap {
+  position: relative;
+  margin-bottom: 30px;
+
+  strong {
+    font-size: 14px !important;
+  }
+
+  @media (min-width: $screen-sm) {
+    height: 345px;
+  }
+
+  @media (min-width: $screen-md) {
+    height: 350px;
+
+    strong {
+      font-size: 18px !important;
+    }
+  }
+
+  .phase-top {
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px $darkgrey;
+    color: $white;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+    width: 90%;
+    z-index: 1000;
+    clear: both;
+    left: 0;
+
+    @media (max-width: $screen-sm){
+      position: relative;
+      left: 0 !important;
+    }
+
+    &.no-bottom {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+      font-size: 13px;
+    }
+
+    @media (min-width: $screen-sm) {
+      top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      left: 0;
+      width: 120px;
+      height: 150px;
+
+      &:after {
+        content:'';
+        display: block;
+        background: $midgrey;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: 2px solid $middarkgrey;
+        position: absolute;
+        left: 50%;
+        top: 183px;
+        margin-left: -10px;
+      }
+
+      &:before {
+        content:'';
+        display: block;
+        background: $darkgrey;
+        width: 5px;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        margin-left: -2px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  .phase {
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px $darkgrey;
+    color: $white;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+    width: 90%;
+    z-index: 1000;
+    clear: both;
+
+    &.no-bottom {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $screen-sm){
+      position: relative;
+      left: 0 !important;
+    }
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+      font-size: 13px;
+      width: 100px;
+    }
+
+    @media (min-width: $screen-sm) {
+      top: 225px;
+      margin-bottom: 0;
+      position: absolute;
+      left: auto;
+      width: 120px;
+      height: 150px;
+
+      &:after {
+        content:'';
+        display: block;
+        background: $midgrey;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: 2px solid $middarkgrey;
+        position: absolute;
+        left: 50%;
+        top: -40px;
+        margin-left: -10px;
+      }
+
+      &:before {
+        content:'';
+        display: block;
+        background: $darkgrey;
+        width: 5px;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        margin-left: -2px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  .phase-1 {
+    left: 0;
+    background: #4a9e4a;
+  }
+
+  .phase-2 {
+    left: 75px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+        left: 100px;
+    }
+  }
+  .phase-3 {
+    left: 150px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+        left: 200px;
+    }
+  }
+
+  .phase-4 {
+    left: 225px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+        left: 300px;
+    }
+  }
+
+  .phase-5 {
+    left: 300px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+        left: 400px;
+    }
+  }
+
+  .phase-6 {
+    left: 375px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+      left: 500px;
+    }
+  }
+  .phase-6-b {
+    left: 375px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+      left: 500px;
+    }
+  }
+
+  .phase-7 {
+    left: 450px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+        left: 600px;
+    }
+  }
+
+    .phase-7-b {
+      left: 450px;
+      background: #4a9e4a;
+
+      @media (min-width: $screen-md) {
+          left: 600px;
+      }
+    }
+
+    .phase-8 {
+    left: 525px;
+    background: #4a9e4a;
+
+    @media (min-width: $screen-md) {
+        left: 700px;
+    }
+  }
+
+  .phase-9 {
+    left: 600px;
+    background: $auburn;
+
+    @media (min-width: $screen-md) {
+        left: 800px;
+    }
+  }
+
+  .phase-10 {
+    left: 675px;
+    background: #006cff;
+
+    @media (min-width: $screen-md) {
+        left: 900px;
+    }
+  }
+
+
+  .timeframe {
+    background: $darkgrey;
+    border-radius: 20px;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: center;
+    text-shadow: 0 0 5px $black;
+
+     h4 {
+      margin: 0;
+    }
+
+    @media (min-width: $screen-sm) {
+      background: none;
+      height: 63px;
+      margin-bottom: 0;
+      position: absolute;
+      text-shadow: 0 0 1px $black;
+      top: 0;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 40px;
+    }
+  }
+}
+
+
+.bar-stratmap {
+  background: $darkgrey;
+  height: 4px;
+  top: 189px;
+  position: absolute;
+  width: 95%;
+  margin-left: 50px;
+
+  @media (min-width: $screen-md) {
+    top: 189px;
+    margin-left: 80px;
+    margin-right: 20px;
+    width: 900px;
+  }
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.bar-vertical-stratmap {
+    background:$darkgrey;
+    height: 90%;
+    top: 50px;
+    position: absolute;
+    right: 50%;
+    width: 4px;
+    z-index: 0;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+}
+
+// Address Points and Parcel customization
+
+#stratmap-top-header {
+  background: $darkgrey;
+  color: $white;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.legend {
+  font-size: 12px;
+  min-width: 300px;
+  max-width: 300px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+.vendor-tiles {
+  margin: 20px;
+}
+
+.icon {
+  margin-right : 4px;
+  margin-left : 16px;
+}
+
+.fa.fa-box-open {
+  padding: 0 3px 0 3px
+}
+
+.fa.fa-wrench {
+  padding: 0 3px 0 3px
+}
+
+.fa.fa-laptop {
+  padding: 0 3px 0 3px
+}
+
+.myDiv {
+  height: 25%;
+}
+
+.myDiv2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.myDiv3 {
+  position: absolute;
+  bottom: 0px;
+  margin: 10px 0 10px 0;
+}
+
+.shadow1 {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.progress {
+  box-shadow: 0 2px 5px #919191 inset;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 89%;
+  background-color: #fe8e51;
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: Roboto Condensed;
+  color: black;
+  text-align: left;
+  padding-left: 10px;
+}

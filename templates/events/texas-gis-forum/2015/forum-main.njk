@@ -1,0 +1,63 @@
+
+{% extends "base.njk" %}
+{% import "_form_macros.njk" as form %}
+
+
+{% block styles %}
+  {{ super() }}
+
+  {{form.styles()}}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+
+  {{form.scripts()}}
+
+{% endblock %}
+
+
+{% block topcontent %}
+  <div id="_2015-forum-container">
+    <div class=full>
+      <div class="top-container">
+        {% if mainimage %}
+        <div>
+          <img src="{{mainimage}}" class="banner img-fluid mx-auto" alt="Texas GIS Forum Main Image">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="_2015-forum-intro">
+      <div class="container-md">
+        <p class="lead">
+          Revisit the 2015 Forum.
+      </p>
+      </div>
+    </div>
+{% endblock %}
+
+{% block contentsOne %}
+<div id="contentMain" class="container-md">
+  {% include "partials/2015-forum/forum-nav.njk" %}
+  <div class="row">
+    <div class="col-lg-12">
+      {{contents|safe}}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block contentsTwo %}
+  <section class="forum-map">
+    <div class="container-md">
+      <div class="row">
+        {% include "partials/2015-forum/forum-map.njk" %}
+      </div>
+    </div>
+  </section>
+  <section class="forum-sponsors">
+    {% include "partials/2015-forum/forum-sponsors.njk" %}
+  </section>
+{% endblock %}

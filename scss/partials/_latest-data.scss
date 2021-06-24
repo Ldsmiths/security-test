@@ -1,0 +1,57 @@
+/* styles for latest-datahub-collections partial */
+.latest-data-container {
+  // position: relative;
+  width: 100%;
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .latest-data-collection {
+    div.latest-data-item {
+      clear: both;
+      float: left;
+      margin-bottom: 10px;
+      height: 150px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+        height: 150px;
+      }
+
+      h3 {
+        bottom: 5px;
+        color: $white;
+        left: 10px;
+        margin: 0;
+        position: absolute;
+        text-shadow: 2px 2px 2px $darkgrey;
+      }
+
+      strong {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+
+      img {
+        position: absolute;
+
+        @media (min-width: $screen-sm) {
+          max-height: 100%;
+        }
+
+        @media (min-width: $screen-lg) {
+          width: 100%;
+        }
+      }
+
+      a:hover {
+        img {
+        opacity: .75;
+        }
+      }
+    }
+  }
+}
