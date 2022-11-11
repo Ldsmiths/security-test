@@ -65,7 +65,7 @@
     "metalsmith-permalinks": "^2.2.0",
     "metalsmith-sitemap": "^1.2.2",
     "mini-css-extract-plugin": "^1.6.0",
-    "minimatch": "^3.0.4",
+    "minimatch": "^3.0.5",
     "moment": "^2.29.1",
     "sass": "^1.35.1",
     "sass-loader": "^8.0.2",
